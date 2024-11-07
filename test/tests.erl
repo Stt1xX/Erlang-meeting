@@ -2,14 +2,18 @@
 
 -include_lib("eunit/include/eunit.hrl").
 
+-define(FILENAME, task8).
+
 first_test() ->
-    ?assertEqual(16, mod:pow2(4)).
+    Number = reader:get_string(?FILENAME),
+    ?assertEqual({5832.0, [9, 9, 8, 9]}, module_sol:module_implementation(4, Number)).
 
 second_test() ->
-    ?assertEqual(25, mod:pow2(5)).
+    Number = reader:get_string(?FILENAME),
+    ?assertEqual({5832.0, [9, 9, 8, 9]}, mon_sol:monolithic_implementation(4, Number)).
 
 third_test() ->
-    ?assertEqual(36, mod:pow2(6)).
-
-fourth_test() ->
-    ?assertEqual(49, mod:pow2(7)).
+    Number = reader:get_string(?FILENAME),
+    ?assertEqual(
+        mon_sol:monolithic_implementation(13, Number), mon_sol:monolithic_implementation(13, Number)
+    ).
