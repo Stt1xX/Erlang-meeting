@@ -23,11 +23,11 @@ fourth_test() ->
     ?assertEqual(220, monolit_task2:find_sum_of_proper_divisors(284, 1, 0)),
     ?assertEqual(284, monolit_task2:find_sum_of_proper_divisors(220, 1, 0)).
 
-fifth_test()    ->
+fifth_test() ->
     ?assertEqual(220, module_task2:find_sum_of_proper_divisors(284)),
     ?assertEqual(284, module_task2:find_sum_of_proper_divisors(220)).
 
-sixth_test()    ->
+sixth_test() ->
     ?assertEqual(
         module_task2:module_implementation(1, 10000),
         monolit_task2:monolithic_implementation(1, 10000)

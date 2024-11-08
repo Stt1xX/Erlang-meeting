@@ -5,9 +5,9 @@
 find_sum_of_proper_divisors(N) ->
     lists:foldl(
         fun(X, Acc) ->
-            if
-                N rem X == 0 -> Acc + X;
-                true -> Acc
+            case N rem X == 0 of
+                true -> Acc + X;
+                false -> Acc
             end
         end,
         0,
