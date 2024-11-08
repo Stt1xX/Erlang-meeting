@@ -1,4 +1,4 @@
--module(mon_sol).
+-module(monolit_task1).
 
 -export([monolithic_implementation/2]).
 

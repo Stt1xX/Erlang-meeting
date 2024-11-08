@@ -1,4 +1,4 @@
--module(module_sol).
+-module(module_task1).
 
 -export([module_implementation/2]).
 
