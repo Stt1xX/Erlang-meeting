@@ -24,3 +24,7 @@ jobs:
       run: rebar3 compile
     - name: Run tests
       run: rebar3 do eunit, ct
+    - name: Run linter
+      run: rebar3 lint
+    - name: Run formatter
+      run: rebar3 fmt
